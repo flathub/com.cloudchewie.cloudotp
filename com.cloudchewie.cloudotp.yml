@@ -18,6 +18,7 @@ cleanup:
   - /lib/pkgconfig
   - /man
   - /share/man
+  - /share/doc
   - /share/gtk-doc
 
 modules:
@@ -26,7 +27,13 @@ modules:
   - shared-modules/libayatana-appindicator/libayatana-appindicator-gtk3.json
 
   - name: keybinder3
-    buildsystem: autotools
+    buildsystem: simple
+    build-commands:
+      - touch ./ChangeLog
+      - autoreconf -i
+      - ./configure --prefix=${FLATPAK_DEST}
+      - make -j ${FLATPK_BUILDER_N_JOBS}
+      - make install
     sources:
       - type: git
         url: https://github.com/kupferlauncher/keybinder.git

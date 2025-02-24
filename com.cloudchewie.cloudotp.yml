@@ -85,7 +85,7 @@ modules:
     build-commands:
       - mkdir -p build/native_assets/linux
       - setup-flutter.sh
-      - flutter build linux --release
+      - flutter build linux --release --verbose
       - cp -r ${BUNDLE_PATH}/* ${FLATPAK_DEST}/bin
       - install -Dm644 com.cloudchewie.cloudotp.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
       - install -Dm644 tools/linux_tools/com.cloudchewie.cloudotp.desktop -t ${FLATPAK_DEST}/share/applications

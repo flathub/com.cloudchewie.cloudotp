@@ -71,25 +71,14 @@ modules:
   - name: cloudotp
     buildsystem: simple
     build-options:
-      arch:
-        x86_64:
-          env:
-            BUNDLE_PATH: build/linux/x64/release/bundle
-        aarch64:
-          env:
-            BUNDLE_PATH: build/linux/arm64/release/bundle
-      append-path: /usr/lib/sdk/llvm19/bin:/var/lib/flutter/bin
+      build-args:
+        - --share=network
+      append-path: /usr/lib/sdk/llvm19/bin
       prepend-ld-library-path: /usr/lib/sdk/llvm19/lib
       env:
         PUB_CACHE: /run/build/cloudotp/.pub-cache
     build-commands:
-      - mkdir -p build/native_assets/linux
-      - setup-flutter.sh
-      - flutter build linux --release
-      - cp -r ${BUNDLE_PATH}/* ${FLATPAK_DEST}/bin
-      - install -Dm644 com.cloudchewie.cloudotp.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
-      - install -Dm644 tools/linux_tools/com.cloudchewie.cloudotp.desktop -t ${FLATPAK_DEST}/share/applications
-      - install -Dm644 assets/logo-transparent.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - flutter/bin/flutter build linux --release
     sources:
       - type: git
         url: https://github.com/Robert-Stackflow/CloudOTP.git
@@ -104,10 +93,7 @@ modules:
         path: generated
         dest: lib/generated
       # flutter
-      - type: file
-        path: package_config.json
-        dest: flutter/packages/flutter_tools/.dart_tool
-      - pubspec-sources-flutter.json
-      - pubspec-sources-cloudotp.json
-    modules:
-      - flutter-sdk-3.24.5.json
+      - type: git
+        url: https://github.com/flutter/flutter.git
+        tag: 3.24.5
+        dest: flutter

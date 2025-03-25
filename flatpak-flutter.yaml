@@ -22,7 +22,7 @@ cleanup:
   - /share/man
   - /share/doc
   - /share/gtk-doc
-
+  - /var/lib
 modules:
   - shared-modules/libsecret/libsecret.json
 
@@ -48,22 +48,20 @@ modules:
   - name: sqlcipher
     buildsystem: autotools
     build-options:
-      cflags: -DSQLITE_SECURE_DELETE -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_FTS3
-        -DSQLITE_ENABLE_RTREE=1 -DSQLITE_SOUNDEX=1 -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_OMIT_LOOKASIDE=1
-        -DSQLITE_ENABLE_UPDATE_DELETE_LIMIT=1 -DSQLITE_MAX_SCHEMA_RETRY=25 -DSQLITE_HAS_CODEC
-        -DHAVE_USLEEP=1
+      cflags: -DSQLITE_HAS_CODEC
+              -DSQLITE_EXTRA_INIT=sqlcipher_extra_init
+              -DSQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown
       ldflags: -lcrypto
     config-opts:
-      - --enable-tempstore
-      - --enable-threadsafe
+      - --with-tempstore=yes
       - --disable-tcl
     cleanup:
       - /bin/sqlcipher
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git
-        tag: v4.6.1
-        commit: c5bd336ece77922433aaf6d6fe8cf203b0c299d5
+        tag: v4.7.0
+        commit: 57d38556213b56fbdc2661fd65fd338efdf28ac9
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -73,12 +71,23 @@ modules:
     build-options:
       build-args:
         - --share=network
-      append-path: /usr/lib/sdk/llvm19/bin
+      arch:
+        x86_64:
+          env:
+            BUNDLE_PATH: build/linux/x64/release/bundle
+        aarch64:
+          env:
+            BUNDLE_PATH: build/linux/arm64/release/bundle
+      append-path: /usr/lib/sdk/llvm19/bin:/run/build/cloudotp/flutter/bin
       prepend-ld-library-path: /usr/lib/sdk/llvm19/lib
       env:
         PUB_CACHE: /run/build/cloudotp/.pub-cache
     build-commands:
-      - flutter/bin/flutter build linux --release --verbose
+      - flutter build linux --release
+      - cp -r ${BUNDLE_PATH}/* ${FLATPAK_DEST}/bin
+      - install -Dm644 com.cloudchewie.cloudotp.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
+      - install -Dm644 tools/linux_tools/com.cloudchewie.cloudotp.desktop -t ${FLATPAK_DEST}/share/applications
+      - install -Dm644 assets/logo-transparent.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
     sources:
       - type: git
         url: https://github.com/Robert-Stackflow/CloudOTP.git
@@ -96,4 +105,5 @@ modules:
       - type: git
         url: https://github.com/flutter/flutter.git
         tag: 3.24.5
+        commit: dec2ee5c1f98f8e84a7d5380c05eb8a3d0a81668
         dest: flutter

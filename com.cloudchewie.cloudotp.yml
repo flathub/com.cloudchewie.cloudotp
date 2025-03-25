@@ -54,7 +54,7 @@ modules:
         -DHAVE_USLEEP=1
       ldflags: -lcrypto
     config-opts:
-      - --enable-tempstore
+      - --with-tempstore=yes
       - --enable-threadsafe
       - --disable-tcl
     cleanup:

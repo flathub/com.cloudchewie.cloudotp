@@ -87,8 +87,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Robert-Stackflow/CloudOTP.git
-        tag: V2.4.6
-        commit: be2f2b50243e7cc337ed08eb458455a73b923c6c
+        tag: V3.0.0
+        commit: eb57e1b717296814fabf0c3ca5db7f9636caaa2b
         x-checker-data:
           type: git
           tag-pattern: ^V([\d.]+)$

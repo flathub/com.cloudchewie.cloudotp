@@ -1290,6 +1290,26 @@ class S {
     );
   }
 
+  /// `Show view icon`
+  String get showEye {
+    return Intl.message(
+      'Show view icon',
+      name: 'showEye',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When the view icon is displayed, the code can only be displayed by clicking on the view icon; when it is not displayed, click on the token to display the code`
+  String get showEyeTip {
+    return Intl.message(
+      'When the view icon is displayed, the code can only be displayed by clicking on the view icon; when it is not displayed, click on the token to display the code',
+      name: 'showEyeTip',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Copy Times`
   String get copyTimes {
     return Intl.message(
@@ -6867,6 +6887,146 @@ class S {
       name: 'licenseDetail',
       desc: '',
       args: [license],
+    );
+  }
+
+  /// `Sidebar`
+  String get sideBarSettings {
+    return Intl.message(
+      'Sidebar',
+      name: 'sideBarSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Token Card Settings`
+  String get tokenCardSettings {
+    return Intl.message(
+      'Token Card Settings',
+      name: 'tokenCardSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Token Operation`
+  String get tokenOperationSettings {
+    return Intl.message(
+      'Token Operation',
+      name: 'tokenOperationSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Other`
+  String get otherOperationSettings {
+    return Intl.message(
+      'Other',
+      name: 'otherOperationSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Backup Password`
+  String get backupPasswordSettings {
+    return Intl.message(
+      'Backup Password',
+      name: 'backupPasswordSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Auto Backup`
+  String get autoBackupSettings {
+    return Intl.message(
+      'Auto Backup',
+      name: 'autoBackupSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Local Backup`
+  String get localBackupSettings {
+    return Intl.message(
+      'Local Backup',
+      name: 'localBackupSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cloud Backup`
+  String get cloudBackupSettings {
+    return Intl.message(
+      'Cloud Backup',
+      name: 'cloudBackupSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Database Encryption`
+  String get databaseEncryptionSettings {
+    return Intl.message(
+      'Database Encryption',
+      name: 'databaseEncryptionSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gesture Lock`
+  String get gestureLockSettings {
+    return Intl.message(
+      'Gesture Lock',
+      name: 'gestureLockSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Auto Lock`
+  String get autoLockSettings {
+    return Intl.message(
+      'Auto Lock',
+      name: 'autoLockSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Project Repository`
+  String get projectRepoAbout {
+    return Intl.message(
+      'Project Repository',
+      name: 'projectRepoAbout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `App`
+  String get appAbout {
+    return Intl.message(
+      'App',
+      name: 'appAbout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact`
+  String get contactAbout {
+    return Intl.message(
+      'Contact',
+      name: 'contactAbout',
+      desc: '',
+      args: [],
     );
   }
 }

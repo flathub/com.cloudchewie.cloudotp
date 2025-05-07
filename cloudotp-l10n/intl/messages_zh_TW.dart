@@ -153,6 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyPinnedToken": m2,
         "alreadyUnPinnedToken": m3,
         "analyzing": MessageLookupByLibrary.simpleMessage("解析中..."),
+        "appAbout": MessageLookupByLibrary.simpleMessage("APP"),
         "appName": MessageLookupByLibrary.simpleMessage("CloudOTP"),
         "appearanceSetting": MessageLookupByLibrary.simpleMessage("外觀"),
         "atLeast4Points":
@@ -165,6 +166,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "autoBackupPasswordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("密碼不能為空"),
         "autoBackupPath": MessageLookupByLibrary.simpleMessage("本地備份位置"),
+        "autoBackupSettings": MessageLookupByLibrary.simpleMessage("自動備份"),
         "autoBackupTip": MessageLookupByLibrary.simpleMessage(
             "當令牌或分類發生變更時自動備份至指定位置；設定備份密碼後生效"),
         "autoCheckUpdates": MessageLookupByLibrary.simpleMessage("自動檢查更新"),
@@ -184,6 +186,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("目前代碼過期後，自動隱藏代碼；點擊後可以再次顯示代碼"),
         "autoLock": MessageLookupByLibrary.simpleMessage("處於背景自動鎖定"),
         "autoLockDelay": MessageLookupByLibrary.simpleMessage("自動鎖定時機"),
+        "autoLockSettings": MessageLookupByLibrary.simpleMessage("自動鎖定"),
         "autoLockTip": MessageLookupByLibrary.simpleMessage(
             "啟用手勢密碼或自訂資料庫密碼後，支援自動鎖定功能；在Windows、Linux、MacOS裝置中，視窗最小化或最小化至匣時即表示處於背景"),
         "autoMatchTokenIcon": MessageLookupByLibrary.simpleMessage("自動比對圖示"),
@@ -199,6 +202,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "back": MessageLookupByLibrary.simpleMessage("返回"),
         "backupFailed": MessageLookupByLibrary.simpleMessage("備份失敗"),
         "backupLogs": MessageLookupByLibrary.simpleMessage("備份日誌"),
+        "backupPasswordSettings": MessageLookupByLibrary.simpleMessage("備份密碼"),
         "backupSetting": MessageLookupByLibrary.simpleMessage("備份"),
         "backupSuccess": MessageLookupByLibrary.simpleMessage("備份成功"),
         "backupToCloud": MessageLookupByLibrary.simpleMessage("雲端服務"),
@@ -335,6 +339,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("雲端備份服務設定"),
         "cloudBackupServiceSettingTip":
             MessageLookupByLibrary.simpleMessage("設定雲端備份服務"),
+        "cloudBackupSettings": MessageLookupByLibrary.simpleMessage("雲端備份"),
         "cloudConnecting": MessageLookupByLibrary.simpleMessage("連線中..."),
         "cloudConnectionError": MessageLookupByLibrary.simpleMessage("伺服器連線失敗"),
         "cloudDisplayName": MessageLookupByLibrary.simpleMessage("暱稱"),
@@ -383,6 +388,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "complete": MessageLookupByLibrary.simpleMessage("完成"),
         "confirm": MessageLookupByLibrary.simpleMessage("確認"),
         "contact": MessageLookupByLibrary.simpleMessage("聯絡我們"),
+        "contactAbout": MessageLookupByLibrary.simpleMessage("聯絡我們"),
         "copy": MessageLookupByLibrary.simpleMessage("複製"),
         "copyLink": MessageLookupByLibrary.simpleMessage("複製連結"),
         "copyNextTokenCode": MessageLookupByLibrary.simpleMessage("複製下一個程式碼"),
@@ -412,6 +418,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFontFamily": MessageLookupByLibrary.simpleMessage("自訂字體"),
         "cut": MessageLookupByLibrary.simpleMessage("剪下"),
         "darkTheme": MessageLookupByLibrary.simpleMessage("深色模式"),
+        "databaseEncryptionSettings":
+            MessageLookupByLibrary.simpleMessage("資料庫加密"),
         "dayAgo": m15,
         "decryptDatabasePassword":
             MessageLookupByLibrary.simpleMessage("解鎖資料庫"),
@@ -586,6 +594,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "gestureLock": MessageLookupByLibrary.simpleMessage("手勢密碼"),
         "gestureLockNotMatch":
             MessageLookupByLibrary.simpleMessage("與上一次繪製不一致, 請重新繪製"),
+        "gestureLockSettings": MessageLookupByLibrary.simpleMessage("手勢鎖"),
         "gestureLockWrong": MessageLookupByLibrary.simpleMessage("密碼錯誤, 請重新繪製"),
         "getNewVersion": m25,
         "githubRepo": MessageLookupByLibrary.simpleMessage("GitHub倉庫"),
@@ -771,6 +780,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "由於Sqlcipher庫遺失，CloudOTP無法正常解密資料庫；您的資料並未遺失，請按一下下方取得Sqlcipher庫"),
         "loadUnkownError": MessageLookupByLibrary.simpleMessage("未知錯誤"),
         "loading": MessageLookupByLibrary.simpleMessage("載入中..."),
+        "localBackupSettings": MessageLookupByLibrary.simpleMessage("本地備份"),
         "lock": MessageLookupByLibrary.simpleMessage("鎖定軟體"),
         "lockAppTray": MessageLookupByLibrary.simpleMessage("鎖定"),
         "lxgw": MessageLookupByLibrary.simpleMessage("霞鷸文楷"),
@@ -816,6 +826,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "officialWebsiteTray": MessageLookupByLibrary.simpleMessage("官網"),
         "openWithBrowser": MessageLookupByLibrary.simpleMessage("在瀏覽器開啟"),
         "operationSetting": MessageLookupByLibrary.simpleMessage("操作"),
+        "otherOperationSettings": MessageLookupByLibrary.simpleMessage("其他"),
         "parseQrCodeWrong": MessageLookupByLibrary.simpleMessage("解析失敗"),
         "paste": MessageLookupByLibrary.simpleMessage("貼上"),
         "pendingBackup": m41,
@@ -834,6 +845,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseRate": MessageLookupByLibrary.simpleMessage("請評分"),
         "primaryColor": MessageLookupByLibrary.simpleMessage("主色調"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("隱私權政策"),
+        "projectRepoAbout": MessageLookupByLibrary.simpleMessage("專案倉庫"),
         "pureBlack": MessageLookupByLibrary.simpleMessage("極簡黑"),
         "pureWhite": MessageLookupByLibrary.simpleMessage("極簡白"),
         "rate": MessageLookupByLibrary.simpleMessage("評分數吧"),
@@ -956,9 +968,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "showBackupLogButton": MessageLookupByLibrary.simpleMessage("顯示備份日誌按鈕"),
         "showCloudBackupButton":
             MessageLookupByLibrary.simpleMessage("顯示雲端備份按鈕"),
+        "showEye": MessageLookupByLibrary.simpleMessage("顯示檢視圖示"),
+        "showEyeTip": MessageLookupByLibrary.simpleMessage(
+            "顯示檢視圖示時只有點擊檢視圖示才能顯示代碼；不顯示時點選令牌即可顯示代碼"),
         "showLayoutButton": MessageLookupByLibrary.simpleMessage("顯示佈局按鈕"),
         "showSortButton": MessageLookupByLibrary.simpleMessage("顯示排序按鈕"),
         "showTray": MessageLookupByLibrary.simpleMessage("顯示系統托盤"),
+        "sideBarSettings": MessageLookupByLibrary.simpleMessage("側邊欄"),
         "simpleLayoutType": MessageLookupByLibrary.simpleMessage("簡潔"),
         "smileySans": MessageLookupByLibrary.simpleMessage("得意黑"),
         "spotlightLayoutType": MessageLookupByLibrary.simpleMessage("聚焦"),
@@ -970,12 +986,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "tokenAccount": MessageLookupByLibrary.simpleMessage("帳戶"),
         "tokenAccountHint": MessageLookupByLibrary.simpleMessage("帳戶名稱或郵件信箱"),
         "tokenAlgorithm": MessageLookupByLibrary.simpleMessage("演算法"),
+        "tokenCardSettings": MessageLookupByLibrary.simpleMessage("令牌外觀"),
         "tokenCounter": MessageLookupByLibrary.simpleMessage("計數"),
         "tokenCounterHint":
             MessageLookupByLibrary.simpleMessage("HOTP類型令牌的計數器"),
         "tokenDigits": MessageLookupByLibrary.simpleMessage("位數"),
         "tokenIssuer": MessageLookupByLibrary.simpleMessage("應用"),
         "tokenIssuerHint": MessageLookupByLibrary.simpleMessage("套用名稱"),
+        "tokenOperationSettings": MessageLookupByLibrary.simpleMessage("令牌操作"),
         "tokenPeriod": MessageLookupByLibrary.simpleMessage("間隔"),
         "tokenPeriodHint":
             MessageLookupByLibrary.simpleMessage("密碼刷新時間間隔，預設為30秒"),

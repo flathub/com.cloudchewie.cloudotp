@@ -65,6 +65,7 @@ modules:
   - name: cloudotp
     buildsystem: simple
     build-options:
+      cxxflags: -Wno-error=deprecated-declarations
       arch:
         x86_64:
           env:

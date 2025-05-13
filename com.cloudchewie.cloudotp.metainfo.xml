@@ -49,8 +49,11 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="2.4.6" date="2024-10-11">
+    <release version="2.4.7" date="2025-05-13">
       <description></description>
+    </release>
+    <release version="2.4.6" date="2024-10-11">
+      <description/>
     </release>
   </releases>
   <content_rating type="oars-1.1"/>

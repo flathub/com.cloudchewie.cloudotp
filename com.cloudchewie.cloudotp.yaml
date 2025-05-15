@@ -57,8 +57,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git
-        tag: v4.8.0
-        commit: ab47245fc9b7ee078b679ff4a7e18dc23c42e636
+        tag: v4.9.0
+        commit: c7e811b399379c948b423872ad7ba91d2ce38434
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -88,8 +88,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Robert-Stackflow/CloudOTP.git
-        tag: V2.4.6
-        commit: be2f2b50243e7cc337ed08eb458455a73b923c6c
+        tag: V2.4.7
+        commit: af4416336dc01ac7e4666016cd9ec1e4d40aee9f
         x-checker-data:
           type: git
           tag-pattern: ^V([\d.]+)$

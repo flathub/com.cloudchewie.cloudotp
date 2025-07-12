@@ -162,6 +162,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyPinnedToken": m2,
         "alreadyUnPinnedToken": m3,
         "analyzing": MessageLookupByLibrary.simpleMessage("解析中..."),
+        "appAbout": MessageLookupByLibrary.simpleMessage("APP"),
         "appName": MessageLookupByLibrary.simpleMessage("CloudOTP"),
         "appearanceSetting": MessageLookupByLibrary.simpleMessage("外観"),
         "atLeast4Points": MessageLookupByLibrary.simpleMessage(
@@ -178,6 +179,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "autoBackupPasswordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("パスワードは空にできません"),
         "autoBackupPath": MessageLookupByLibrary.simpleMessage("ローカルバックアップ位置"),
+        "autoBackupSettings": MessageLookupByLibrary.simpleMessage("自動バックアップ"),
         "autoBackupTip": MessageLookupByLibrary.simpleMessage(
             "トークンやカテゴリが変更されたときに指定の場所に自動バックアップします。バックアップパスワード設定後に有効"),
         "autoCheckUpdates": MessageLookupByLibrary.simpleMessage("自動更新チェック"),
@@ -197,6 +199,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "現在のコードが期限切れ後、自動的にコードが隠れます；クリックするとコードを再表示可能"),
         "autoLock": MessageLookupByLibrary.simpleMessage("バックグラウンドで自動ロック"),
         "autoLockDelay": MessageLookupByLibrary.simpleMessage("自動ロックのタイミング"),
+        "autoLockSettings": MessageLookupByLibrary.simpleMessage("自動ロック"),
         "autoLockTip": MessageLookupByLibrary.simpleMessage(
             "ジェスチャーロックまたはカスタムデータベースパスワードを有効にした後、自動ロック機能をサポートします。Windows、Linux、MacOSデバイスでは、ウィンドウが最小化されるか、トレイに最小化されるとバックグラウンドに入ります。"),
         "autoMatchTokenIcon":
@@ -208,11 +211,15 @@ class MessageLookup extends MessageLookupByLibrary {
                 "無効にすると、CloudOTPを開くたびに中央に表示され、デフォルトのウィンドウサイズになります。"),
         "autoMinimizeAfterClickToCopy":
             MessageLookupByLibrary.simpleMessage("クリックしてコピー後、自動的に最小化"),
+        "autoMinimizeAfterClickToCopyOption":
+            MessageLookupByLibrary.simpleMessage("最小化オプション"),
         "autoMinimizeAfterClickToCopyTip": MessageLookupByLibrary.simpleMessage(
             "ワンタイムコードをクリップボードにコピー後、自動的にアプリが最小化されます"),
         "back": MessageLookupByLibrary.simpleMessage("戻る"),
         "backupFailed": MessageLookupByLibrary.simpleMessage("バックアップ失敗"),
         "backupLogs": MessageLookupByLibrary.simpleMessage("バックアップログ"),
+        "backupPasswordSettings":
+            MessageLookupByLibrary.simpleMessage("バックアップパスワード"),
         "backupSetting": MessageLookupByLibrary.simpleMessage("バックアップ"),
         "backupSuccess": MessageLookupByLibrary.simpleMessage("バックアップ成功"),
         "backupToCloud": MessageLookupByLibrary.simpleMessage("クラウドサービス"),
@@ -318,6 +325,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "checkingUpdates": MessageLookupByLibrary.simpleMessage("更新を確認中..."),
         "chooseAutoLockDelay":
             MessageLookupByLibrary.simpleMessage("自動ロックのタイミングを選択"),
+        "chooseAutoMinimizeAfterClickToCopyOption":
+            MessageLookupByLibrary.simpleMessage("最小化オプションを選択します"),
         "chooseCloseWindowOption":
             MessageLookupByLibrary.simpleMessage("メイン画面を閉じるときの選択"),
         "chooseFontFamily": MessageLookupByLibrary.simpleMessage("フォントを選択"),
@@ -360,6 +369,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("クラウドバックアップサービス設定"),
         "cloudBackupServiceSettingTip":
             MessageLookupByLibrary.simpleMessage("クラウドバックアップサービスの設定"),
+        "cloudBackupSettings":
+            MessageLookupByLibrary.simpleMessage("クラウドバックアップ"),
         "cloudConnecting": MessageLookupByLibrary.simpleMessage("接続中..."),
         "cloudConnectionError":
             MessageLookupByLibrary.simpleMessage("サーバー接続エラー"),
@@ -413,6 +424,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "complete": MessageLookupByLibrary.simpleMessage("完了"),
         "confirm": MessageLookupByLibrary.simpleMessage("確認"),
         "contact": MessageLookupByLibrary.simpleMessage("お問い合わせ"),
+        "contactAbout": MessageLookupByLibrary.simpleMessage("お問い合わせ"),
         "copy": MessageLookupByLibrary.simpleMessage("コピー"),
         "copyLink": MessageLookupByLibrary.simpleMessage("リンクをコピー"),
         "copyNextTokenCode": MessageLookupByLibrary.simpleMessage("次のコードをコピー"),
@@ -443,6 +455,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFontFamily": MessageLookupByLibrary.simpleMessage("カスタムフォント"),
         "cut": MessageLookupByLibrary.simpleMessage("切り取り"),
         "darkTheme": MessageLookupByLibrary.simpleMessage("ダークテーマ"),
+        "databaseEncryptionSettings":
+            MessageLookupByLibrary.simpleMessage("データベース暗号化"),
         "dayAgo": m15,
         "decryptDatabasePassword":
             MessageLookupByLibrary.simpleMessage("データベースを解錠"),
@@ -632,6 +646,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "gestureLock": MessageLookupByLibrary.simpleMessage("ジェスチャーロック"),
         "gestureLockNotMatch":
             MessageLookupByLibrary.simpleMessage("前回の描画と一致しません。再度描いてください。"),
+        "gestureLockSettings":
+            MessageLookupByLibrary.simpleMessage("ジェスチャーロック"),
         "gestureLockWrong":
             MessageLookupByLibrary.simpleMessage("パスワードが間違っています。再度描いてください。"),
         "getNewVersion": m25,
@@ -826,6 +842,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Sqlcipherライブラリが欠落しているため、CloudOTPは正常にデータベースを解読できません。データは失われていません。下のリンクをクリックしてSqlcipherライブラリを入手してください。"),
         "loadUnkownError": MessageLookupByLibrary.simpleMessage("不明なエラー"),
         "loading": MessageLookupByLibrary.simpleMessage("読み込み中..."),
+        "localBackupSettings":
+            MessageLookupByLibrary.simpleMessage("ローカルバックアップ"),
         "lock": MessageLookupByLibrary.simpleMessage("アプリをロック"),
         "lockAppTray": MessageLookupByLibrary.simpleMessage("ロック"),
         "lxgw": MessageLookupByLibrary.simpleMessage("霞鹜文楷"),
@@ -845,6 +863,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "maxBackupCountWarningMessage": m36,
         "miSans": MessageLookupByLibrary.simpleMessage("MiSans"),
         "minimizeToTray": MessageLookupByLibrary.simpleMessage("システムトレイに最小化"),
+        "minimizeToTrayAfterClickToCopy":
+            MessageLookupByLibrary.simpleMessage("システムトレイに最小化"),
+        "minimizeWindowAfterClickToCopy":
+            MessageLookupByLibrary.simpleMessage("ウィンドウを最小化"),
         "minuteAgo": m37,
         "mobileSetting": MessageLookupByLibrary.simpleMessage("モバイル設定"),
         "moreOptionShort": MessageLookupByLibrary.simpleMessage("もっと"),
@@ -874,6 +896,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "officialWebsiteTray": MessageLookupByLibrary.simpleMessage("公式ウェブサイト"),
         "openWithBrowser": MessageLookupByLibrary.simpleMessage("ブラウザで開く"),
         "operationSetting": MessageLookupByLibrary.simpleMessage("操作"),
+        "otherOperationSettings": MessageLookupByLibrary.simpleMessage("その他"),
         "parseQrCodeWrong": MessageLookupByLibrary.simpleMessage("解析に失敗しました"),
         "paste": MessageLookupByLibrary.simpleMessage("貼り付け"),
         "pendingBackup": m41,
@@ -886,26 +909,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "pinToken": MessageLookupByLibrary.simpleMessage("トークンをピン留め"),
         "pinTokenShort": MessageLookupByLibrary.simpleMessage("ピン留め"),
         "platformSetting": MessageLookupByLibrary.simpleMessage("プラットフォーム適応設定"),
-        "pleaseClickToRate":
-            MessageLookupByLibrary.simpleMessage("評価するにはクリックしてください"),
         "pleaseGrantCameraPermission":
             MessageLookupByLibrary.simpleMessage("カメラの権限を付与してください"),
         "pleaseGrantFilePermission":
             MessageLookupByLibrary.simpleMessage("ファイルストレージの権限を付与してください"),
-        "pleaseRate": MessageLookupByLibrary.simpleMessage("評価をお願いします"),
         "primaryColor": MessageLookupByLibrary.simpleMessage("主要な色"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("プライバシーポリシー"),
+        "projectRepoAbout": MessageLookupByLibrary.simpleMessage("プロジェクトリポジトリ"),
         "pureBlack": MessageLookupByLibrary.simpleMessage("ピュアブラック"),
         "pureWhite": MessageLookupByLibrary.simpleMessage("ピュアホワイト"),
-        "rate": MessageLookupByLibrary.simpleMessage("評価する"),
-        "rate1Star": MessageLookupByLibrary.simpleMessage("まだ改善の余地があります"),
-        "rate2Star": MessageLookupByLibrary.simpleMessage("フィードバックをお待ちしています"),
-        "rate3Star": MessageLookupByLibrary.simpleMessage("さらなる改善を目指します！"),
-        "rate4Star": MessageLookupByLibrary.simpleMessage("承認ありがとうございます"),
-        "rate5Star": MessageLookupByLibrary.simpleMessage("キス~~"),
-        "rateLater": MessageLookupByLibrary.simpleMessage("後で評価する"),
-        "rateSuccess": MessageLookupByLibrary.simpleMessage("評価ありがとうございます"),
-        "rateTitle": MessageLookupByLibrary.simpleMessage("CloudOTPを評価してください"),
         "refresh": MessageLookupByLibrary.simpleMessage("更新"),
         "refreshHOTP": MessageLookupByLibrary.simpleMessage("コードをリフレッシュ"),
         "reload": MessageLookupByLibrary.simpleMessage("再読み込み"),
@@ -920,13 +932,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("コピー回数をリセット"),
         "resetSuccess": MessageLookupByLibrary.simpleMessage("リセット成功"),
         "rightnow": MessageLookupByLibrary.simpleMessage("今すぐ"),
-        "s3AccessKey": MessageLookupByLibrary.simpleMessage("アクセスキー"),
+        "s3AccessKey": MessageLookupByLibrary.simpleMessage("アクセスID"),
         "s3AccessKeyCannotBeEmpty":
-            MessageLookupByLibrary.simpleMessage("アクセスキーは空にできません"),
+            MessageLookupByLibrary.simpleMessage("アクセスIDは空にできません"),
         "s3AccessKeyHint":
-            MessageLookupByLibrary.simpleMessage("S3クラウドサービスアクセスキーを入力"),
-        "s3AccessKeyTip":
-            MessageLookupByLibrary.simpleMessage("S3クラウドサービスアクセスキー"),
+            MessageLookupByLibrary.simpleMessage("S3サービスのアクセスIDを入力してください"),
+        "s3AccessKeyTip": MessageLookupByLibrary.simpleMessage("S3サービスのアクセスID"),
         "s3Bucket": MessageLookupByLibrary.simpleMessage("バケット"),
         "s3BucketCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("バケットは空にできません"),
@@ -950,9 +961,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "s3SecretKeyCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("シークレットキーは空にできません"),
         "s3SecretKeyHint":
-            MessageLookupByLibrary.simpleMessage("S3クラウドサービスシークレットキーを入力"),
+            MessageLookupByLibrary.simpleMessage("S3サービスのシークレットキーを入力してください"),
         "s3SecretKeyTip":
-            MessageLookupByLibrary.simpleMessage("S3クラウドサービスシークレットキー"),
+            MessageLookupByLibrary.simpleMessage("S3サービスのシークレットキー"),
         "safeMode": MessageLookupByLibrary.simpleMessage("セーフモード"),
         "safeModeTip": MessageLookupByLibrary.simpleMessage(
             "Android、iOSデバイスのみサポート。ソフトウェアが最近のタスク一覧ページに入ると、ページ内容を非表示にし、アプリ内スクリーンショットを無効にします。"),
@@ -1041,13 +1052,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("バックアップログボタンを表示"),
         "showCloudBackupButton":
             MessageLookupByLibrary.simpleMessage("クラウドバックアップボタンを表示"),
+        "showEye": MessageLookupByLibrary.simpleMessage("ビューアイコンを表示"),
+        "showEyeTip": MessageLookupByLibrary.simpleMessage(
+            "表示アイコンが表示されている場合は、表示アイコンをクリックすることによってのみコードを表示できます。表示されていない場合は、トークンをクリックしてコードを表示します"),
         "showLayoutButton": MessageLookupByLibrary.simpleMessage("レイアウトボタンを表示"),
         "showSortButton": MessageLookupByLibrary.simpleMessage("ソートボタンを表示"),
         "showTray": MessageLookupByLibrary.simpleMessage("システムトレイを表示"),
+        "sideBarSettings": MessageLookupByLibrary.simpleMessage("サイドバー"),
         "simpleLayoutType": MessageLookupByLibrary.simpleMessage("シンプル"),
         "smileySans": MessageLookupByLibrary.simpleMessage("得意黒"),
         "spotlightLayoutType": MessageLookupByLibrary.simpleMessage("スポットライト"),
-        "submitRate": MessageLookupByLibrary.simpleMessage("評価を送信"),
         "telegramGroup": MessageLookupByLibrary.simpleMessage("Telegramチャンネル"),
         "themeMode": MessageLookupByLibrary.simpleMessage("テーマモード"),
         "themeSetting": MessageLookupByLibrary.simpleMessage("テーマ設定"),
@@ -1056,12 +1070,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "tokenAccountHint":
             MessageLookupByLibrary.simpleMessage("アカウント名またはメールアドレス"),
         "tokenAlgorithm": MessageLookupByLibrary.simpleMessage("アルゴリズム"),
+        "tokenCardSettings": MessageLookupByLibrary.simpleMessage("トークンの外観"),
+        "tokenCopyOperationSettings":
+            MessageLookupByLibrary.simpleMessage("トークンコピー操作"),
         "tokenCounter": MessageLookupByLibrary.simpleMessage("カウンタ"),
         "tokenCounterHint":
             MessageLookupByLibrary.simpleMessage("HOTPタイプのトークンのカウンタ"),
         "tokenDigits": MessageLookupByLibrary.simpleMessage("桁数"),
         "tokenIssuer": MessageLookupByLibrary.simpleMessage("アプリケーション"),
         "tokenIssuerHint": MessageLookupByLibrary.simpleMessage("アプリケーション名"),
+        "tokenOperationSettings":
+            MessageLookupByLibrary.simpleMessage("トークン操作"),
         "tokenPeriod": MessageLookupByLibrary.simpleMessage("間隔"),
         "tokenPeriodHint":
             MessageLookupByLibrary.simpleMessage("パスワードのリフレッシュ間隔、デフォルトは30秒"),

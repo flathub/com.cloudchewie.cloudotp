@@ -174,6 +174,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyPinnedToken": m2,
         "alreadyUnPinnedToken": m3,
         "analyzing": MessageLookupByLibrary.simpleMessage("Analyzing..."),
+        "appAbout": MessageLookupByLibrary.simpleMessage("App"),
         "appName": MessageLookupByLibrary.simpleMessage("CloudOTP"),
         "appearanceSetting": MessageLookupByLibrary.simpleMessage("Appearance"),
         "atLeast4Points": MessageLookupByLibrary.simpleMessage(
@@ -192,6 +193,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Password cannot be empty"),
         "autoBackupPath":
             MessageLookupByLibrary.simpleMessage("Local Backup Location"),
+        "autoBackupSettings":
+            MessageLookupByLibrary.simpleMessage("Auto Backup"),
         "autoBackupTip": MessageLookupByLibrary.simpleMessage(
             "Automatically back up to the specified location when tokens or categories change; effective after setting a backup password"),
         "autoCheckUpdates":
@@ -215,6 +218,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Auto-lock when in the background"),
         "autoLockDelay":
             MessageLookupByLibrary.simpleMessage("Auto-lock timing"),
+        "autoLockSettings": MessageLookupByLibrary.simpleMessage("Auto Lock"),
         "autoLockTip": MessageLookupByLibrary.simpleMessage(
             "Supports auto-lock after enabling gesture lock or custom database password; on Windows, Linux, and macOS, minimizing or minimizing to the tray is considered background activity"),
         "autoMatchTokenIcon":
@@ -225,11 +229,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "If disabled, CloudOTP will center and default to the initial window size upon opening"),
         "autoMinimizeAfterClickToCopy": MessageLookupByLibrary.simpleMessage(
             "Auto Minimize After Click to Copy"),
+        "autoMinimizeAfterClickToCopyOption":
+            MessageLookupByLibrary.simpleMessage("Minimize Option"),
         "autoMinimizeAfterClickToCopyTip": MessageLookupByLibrary.simpleMessage(
             "Automatically minimize the app after clicking to copy one-time code to clipboard"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
         "backupFailed": MessageLookupByLibrary.simpleMessage("Backup failed"),
         "backupLogs": MessageLookupByLibrary.simpleMessage("Backup Logs"),
+        "backupPasswordSettings":
+            MessageLookupByLibrary.simpleMessage("Backup Password"),
         "backupSetting": MessageLookupByLibrary.simpleMessage("Backup"),
         "backupSuccess":
             MessageLookupByLibrary.simpleMessage("Backup successful"),
@@ -348,6 +356,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Checking for Updates..."),
         "chooseAutoLockDelay":
             MessageLookupByLibrary.simpleMessage("Choose when to auto-lock"),
+        "chooseAutoMinimizeAfterClickToCopyOption":
+            MessageLookupByLibrary.simpleMessage("Choose minimize option"),
         "chooseCloseWindowOption": MessageLookupByLibrary.simpleMessage(
             "Choose what happens when closing the main interface"),
         "chooseFontFamily": MessageLookupByLibrary.simpleMessage("Choose Font"),
@@ -398,6 +408,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Cloud Backup Service Settings"),
         "cloudBackupServiceSettingTip": MessageLookupByLibrary.simpleMessage(
             "Configure cloud backup service"),
+        "cloudBackupSettings":
+            MessageLookupByLibrary.simpleMessage("Cloud Backup"),
         "cloudConnecting":
             MessageLookupByLibrary.simpleMessage("Connecting..."),
         "cloudConnectionError":
@@ -458,6 +470,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "complete": MessageLookupByLibrary.simpleMessage("Complete"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact Us"),
+        "contactAbout": MessageLookupByLibrary.simpleMessage("Contact"),
         "copy": MessageLookupByLibrary.simpleMessage("Copy"),
         "copyLink": MessageLookupByLibrary.simpleMessage("Copy Link"),
         "copyNextTokenCode":
@@ -496,6 +509,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "customFontFamily": MessageLookupByLibrary.simpleMessage("Custom Font"),
         "cut": MessageLookupByLibrary.simpleMessage("Cut"),
         "darkTheme": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "databaseEncryptionSettings":
+            MessageLookupByLibrary.simpleMessage("Database Encryption"),
         "dayAgo": m15,
         "decryptDatabasePassword":
             MessageLookupByLibrary.simpleMessage("Unlock Database"),
@@ -701,6 +716,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "gestureLock": MessageLookupByLibrary.simpleMessage("Gesture Lock"),
         "gestureLockNotMatch": MessageLookupByLibrary.simpleMessage(
             "Does not match the previous drawing, please try again"),
+        "gestureLockSettings":
+            MessageLookupByLibrary.simpleMessage("Gesture Lock"),
         "gestureLockWrong": MessageLookupByLibrary.simpleMessage(
             "Incorrect password, please draw again"),
         "getNewVersion": m25,
@@ -909,6 +926,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "loadUnkownError":
             MessageLookupByLibrary.simpleMessage("Unknown Error"),
         "loading": MessageLookupByLibrary.simpleMessage("Loading..."),
+        "localBackupSettings":
+            MessageLookupByLibrary.simpleMessage("Local Backup"),
         "lock": MessageLookupByLibrary.simpleMessage("Lock application"),
         "lockAppTray": MessageLookupByLibrary.simpleMessage("Lock"),
         "lxgw": MessageLookupByLibrary.simpleMessage("LXGW WenKai"),
@@ -931,6 +950,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "miSans": MessageLookupByLibrary.simpleMessage("MiSans"),
         "minimizeToTray":
             MessageLookupByLibrary.simpleMessage("Minimize to system tray"),
+        "minimizeToTrayAfterClickToCopy":
+            MessageLookupByLibrary.simpleMessage("Minimize to System Tray"),
+        "minimizeWindowAfterClickToCopy":
+            MessageLookupByLibrary.simpleMessage("Minimize Window"),
         "minuteAgo": m37,
         "mobileSetting":
             MessageLookupByLibrary.simpleMessage("Mobile Settings"),
@@ -967,6 +990,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "openWithBrowser":
             MessageLookupByLibrary.simpleMessage("Open in Browser"),
         "operationSetting": MessageLookupByLibrary.simpleMessage("Operation"),
+        "otherOperationSettings": MessageLookupByLibrary.simpleMessage("Other"),
         "parseQrCodeWrong":
             MessageLookupByLibrary.simpleMessage("Parsing failed"),
         "paste": MessageLookupByLibrary.simpleMessage("Paste"),
@@ -982,32 +1006,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "pinTokenShort": MessageLookupByLibrary.simpleMessage("Pin"),
         "platformSetting": MessageLookupByLibrary.simpleMessage(
             "Platform Adaptation Settings"),
-        "pleaseClickToRate":
-            MessageLookupByLibrary.simpleMessage("Please click to rate"),
         "pleaseGrantCameraPermission": MessageLookupByLibrary.simpleMessage(
             "Please grant camera permission"),
         "pleaseGrantFilePermission": MessageLookupByLibrary.simpleMessage(
             "Please grant file storage permission"),
-        "pleaseRate": MessageLookupByLibrary.simpleMessage("Please rate"),
         "primaryColor": MessageLookupByLibrary.simpleMessage("Primary Color"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "projectRepoAbout":
+            MessageLookupByLibrary.simpleMessage("Project Repository"),
         "pureBlack": MessageLookupByLibrary.simpleMessage("Pure Black"),
         "pureWhite": MessageLookupByLibrary.simpleMessage("Pure White"),
-        "rate": MessageLookupByLibrary.simpleMessage("Rate Us"),
-        "rate1Star":
-            MessageLookupByLibrary.simpleMessage("Still a long way to go"),
-        "rate2Star": MessageLookupByLibrary.simpleMessage(
-            "Looking forward to your feedback and suggestions"),
-        "rate3Star":
-            MessageLookupByLibrary.simpleMessage("I\'ll keep improving!"),
-        "rate4Star": MessageLookupByLibrary.simpleMessage(
-            "Your recognition means a lot!"),
-        "rate5Star":
-            MessageLookupByLibrary.simpleMessage("Thank you so much~~"),
-        "rateLater": MessageLookupByLibrary.simpleMessage("Rate later"),
-        "rateSuccess":
-            MessageLookupByLibrary.simpleMessage("Thank you for your rating"),
-        "rateTitle": MessageLookupByLibrary.simpleMessage("Rate CloudOTP"),
         "refresh": MessageLookupByLibrary.simpleMessage("Refresh"),
         "refreshHOTP": MessageLookupByLibrary.simpleMessage("Refresh Code"),
         "reload": MessageLookupByLibrary.simpleMessage("Reload"),
@@ -1024,13 +1032,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetSuccess":
             MessageLookupByLibrary.simpleMessage("Reset Successful"),
         "rightnow": MessageLookupByLibrary.simpleMessage("Just now"),
-        "s3AccessKey": MessageLookupByLibrary.simpleMessage("Access Key"),
-        "s3AccessKeyCannotBeEmpty":
-            MessageLookupByLibrary.simpleMessage("Access key cannot be empty"),
-        "s3AccessKeyHint": MessageLookupByLibrary.simpleMessage(
-            "Enter S3 Cloud Service Access Key"),
+        "s3AccessKey": MessageLookupByLibrary.simpleMessage("Access Key/ID"),
+        "s3AccessKeyCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "Access key/ID cannot be empty"),
+        "s3AccessKeyHint":
+            MessageLookupByLibrary.simpleMessage("Enter the S3 access key/ID"),
         "s3AccessKeyTip":
-            MessageLookupByLibrary.simpleMessage("S3 Cloud Service Access Key"),
+            MessageLookupByLibrary.simpleMessage("S3 service access key/ID"),
         "s3Bucket": MessageLookupByLibrary.simpleMessage("Bucket"),
         "s3BucketCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Bucket cannot be empty"),
@@ -1055,10 +1063,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "s3SecretKey": MessageLookupByLibrary.simpleMessage("Secret Key"),
         "s3SecretKeyCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Secret key cannot be empty"),
-        "s3SecretKeyHint": MessageLookupByLibrary.simpleMessage(
-            "Enter S3 Cloud Service Secret Key"),
+        "s3SecretKeyHint":
+            MessageLookupByLibrary.simpleMessage("Enter the S3 secret key"),
         "s3SecretKeyTip":
-            MessageLookupByLibrary.simpleMessage("S3 Cloud Service Secret Key"),
+            MessageLookupByLibrary.simpleMessage("S3 service secret key"),
         "safeMode": MessageLookupByLibrary.simpleMessage("Safe Mode"),
         "safeModeTip": MessageLookupByLibrary.simpleMessage(
             "Supported on Android and iOS devices; hides app content when in the recent apps list and disables in-app screenshots"),
@@ -1157,16 +1165,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Show Backup Log Button"),
         "showCloudBackupButton":
             MessageLookupByLibrary.simpleMessage("Show Cloud Backup Button"),
+        "showEye": MessageLookupByLibrary.simpleMessage("Show view icon"),
+        "showEyeTip": MessageLookupByLibrary.simpleMessage(
+            "When the view icon is displayed, the code can only be displayed by clicking on the view icon; when it is not displayed, click on the token to display the code"),
         "showLayoutButton":
             MessageLookupByLibrary.simpleMessage("Show Layout Button"),
         "showSortButton":
             MessageLookupByLibrary.simpleMessage("Show Sort Button"),
         "showTray": MessageLookupByLibrary.simpleMessage("Show system tray"),
+        "sideBarSettings": MessageLookupByLibrary.simpleMessage("Sidebar"),
         "simpleLayoutType": MessageLookupByLibrary.simpleMessage("Simple"),
         "smileySans": MessageLookupByLibrary.simpleMessage("DeYi Hei"),
         "spotlightLayoutType":
             MessageLookupByLibrary.simpleMessage("Spotlight"),
-        "submitRate": MessageLookupByLibrary.simpleMessage("Submit Rating"),
         "telegramGroup":
             MessageLookupByLibrary.simpleMessage("Telegram Channel"),
         "themeMode": MessageLookupByLibrary.simpleMessage("Theme Mode"),
@@ -1176,12 +1187,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "tokenAccountHint":
             MessageLookupByLibrary.simpleMessage("Account name or email"),
         "tokenAlgorithm": MessageLookupByLibrary.simpleMessage("Algorithm"),
+        "tokenCardSettings":
+            MessageLookupByLibrary.simpleMessage("Token Card Settings"),
+        "tokenCopyOperationSettings":
+            MessageLookupByLibrary.simpleMessage("Token Copy Operation"),
         "tokenCounter": MessageLookupByLibrary.simpleMessage("Counter"),
         "tokenCounterHint":
             MessageLookupByLibrary.simpleMessage("Counter for HOTP tokens"),
         "tokenDigits": MessageLookupByLibrary.simpleMessage("Digits"),
         "tokenIssuer": MessageLookupByLibrary.simpleMessage("Issuer"),
         "tokenIssuerHint": MessageLookupByLibrary.simpleMessage("Issuer name"),
+        "tokenOperationSettings":
+            MessageLookupByLibrary.simpleMessage("Token Operation"),
         "tokenPeriod": MessageLookupByLibrary.simpleMessage("Interval"),
         "tokenPeriodHint": MessageLookupByLibrary.simpleMessage(
             "Time interval for password refresh, default is 30 seconds"),

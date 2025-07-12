@@ -78,26 +78,25 @@ modules:
       env:
         PUB_CACHE: /run/build/cloudotp/.pub-cache
     build-commands:
-      - mkdir -p build/native_assets/linux
-      - setup-flutter.sh
+      - setup-flutter.sh -C .
       - flutter build linux --release
       - cp -r ${BUNDLE_PATH}/* ${FLATPAK_DEST}/bin
       - install -Dm644 com.cloudchewie.cloudotp.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
       - install -Dm644 tools/linux_tools/com.cloudchewie.cloudotp.desktop -t ${FLATPAK_DEST}/share/applications
       - install -Dm644 assets/logo-transparent.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
     sources:
+      - pubspec-sources.json
       - type: git
         url: https://github.com/Robert-Stackflow/CloudOTP.git
-        tag: V2.4.6
-        commit: be2f2b50243e7cc337ed08eb458455a73b923c6c
+        tag: V3.0.0
+        commit: a5f4f47085d822e837cbf4841ff7fde85fdd84b2
       - type: file
         path: com.cloudchewie.cloudotp.metainfo.xml
       - type: dir
-        path: generated
+        path: intl/cloudotp/generated
         dest: lib/generated
-      - type: file
-        path: package_config.json
-        dest: flutter/packages/flutter_tools/.dart_tool
-      - pubspec-sources.json
+      - type: dir
+        path: intl/chewie/generated
+        dest: third-party/chewie/lib/src/generated
     modules:
-      - flutter-sdk-3.24.5.json
+      - flutter-sdk-3.27.4.json

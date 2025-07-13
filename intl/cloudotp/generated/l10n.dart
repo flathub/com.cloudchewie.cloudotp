@@ -1170,6 +1170,46 @@ class S {
     );
   }
 
+  /// `Minimize Option`
+  String get autoMinimizeAfterClickToCopyOption {
+    return Intl.message(
+      'Minimize Option',
+      name: 'autoMinimizeAfterClickToCopyOption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose minimize option`
+  String get chooseAutoMinimizeAfterClickToCopyOption {
+    return Intl.message(
+      'Choose minimize option',
+      name: 'chooseAutoMinimizeAfterClickToCopyOption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Minimize Window`
+  String get minimizeWindowAfterClickToCopy {
+    return Intl.message(
+      'Minimize Window',
+      name: 'minimizeWindowAfterClickToCopy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Minimize to System Tray`
+  String get minimizeToTrayAfterClickToCopy {
+    return Intl.message(
+      'Minimize to System Tray',
+      name: 'minimizeToTrayAfterClickToCopy',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Auto Focus Search Bar on App Launch`
   String get autoFocusSearchBar {
     return Intl.message(
@@ -1285,6 +1325,26 @@ class S {
     return Intl.message(
       'Hide the countdown progress bar of the token',
       name: 'hideProgressBarTip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Show view icon`
+  String get showEye {
+    return Intl.message(
+      'Show view icon',
+      name: 'showEye',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When the view icon is displayed, the code can only be displayed by clicking on the view icon; when it is not displayed, click on the token to display the code`
+  String get showEyeTip {
+    return Intl.message(
+      'When the view icon is displayed, the code can only be displayed by clicking on the view icon; when it is not displayed, click on the token to display the code',
+      name: 'showEyeTip',
       desc: '',
       args: [],
     );
@@ -2780,40 +2840,40 @@ class S {
     );
   }
 
-  /// `Access Key`
+  /// `Access Key/ID`
   String get s3AccessKey {
     return Intl.message(
-      'Access Key',
+      'Access Key/ID',
       name: 's3AccessKey',
       desc: '',
       args: [],
     );
   }
 
-  /// `S3 Cloud Service Access Key`
+  /// `S3 service access key/ID`
   String get s3AccessKeyTip {
     return Intl.message(
-      'S3 Cloud Service Access Key',
+      'S3 service access key/ID',
       name: 's3AccessKeyTip',
       desc: '',
       args: [],
     );
   }
 
-  /// `Enter S3 Cloud Service Access Key`
+  /// `Enter the S3 access key/ID`
   String get s3AccessKeyHint {
     return Intl.message(
-      'Enter S3 Cloud Service Access Key',
+      'Enter the S3 access key/ID',
       name: 's3AccessKeyHint',
       desc: '',
       args: [],
     );
   }
 
-  /// `Access key cannot be empty`
+  /// `Access key/ID cannot be empty`
   String get s3AccessKeyCannotBeEmpty {
     return Intl.message(
-      'Access key cannot be empty',
+      'Access key/ID cannot be empty',
       name: 's3AccessKeyCannotBeEmpty',
       desc: '',
       args: [],
@@ -2830,20 +2890,20 @@ class S {
     );
   }
 
-  /// `S3 Cloud Service Secret Key`
+  /// `S3 service secret key`
   String get s3SecretKeyTip {
     return Intl.message(
-      'S3 Cloud Service Secret Key',
+      'S3 service secret key',
       name: 's3SecretKeyTip',
       desc: '',
       args: [],
     );
   }
 
-  /// `Enter S3 Cloud Service Secret Key`
+  /// `Enter the S3 secret key`
   String get s3SecretKeyHint {
     return Intl.message(
-      'Enter S3 Cloud Service Secret Key',
+      'Enter the S3 secret key',
       name: 's3SecretKeyHint',
       desc: '',
       args: [],
@@ -4335,126 +4395,6 @@ class S {
     return Intl.message(
       'Terms of Service',
       name: 'serviceTerm',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Rate Us`
-  String get rate {
-    return Intl.message(
-      'Rate Us',
-      name: 'rate',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Rate CloudOTP`
-  String get rateTitle {
-    return Intl.message(
-      'Rate CloudOTP',
-      name: 'rateTitle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Please rate`
-  String get pleaseRate {
-    return Intl.message(
-      'Please rate',
-      name: 'pleaseRate',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Thank you for your rating`
-  String get rateSuccess {
-    return Intl.message(
-      'Thank you for your rating',
-      name: 'rateSuccess',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Please click to rate`
-  String get pleaseClickToRate {
-    return Intl.message(
-      'Please click to rate',
-      name: 'pleaseClickToRate',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Rate later`
-  String get rateLater {
-    return Intl.message(
-      'Rate later',
-      name: 'rateLater',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Submit Rating`
-  String get submitRate {
-    return Intl.message(
-      'Submit Rating',
-      name: 'submitRate',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Still a long way to go`
-  String get rate1Star {
-    return Intl.message(
-      'Still a long way to go',
-      name: 'rate1Star',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Looking forward to your feedback and suggestions`
-  String get rate2Star {
-    return Intl.message(
-      'Looking forward to your feedback and suggestions',
-      name: 'rate2Star',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `I'll keep improving!`
-  String get rate3Star {
-    return Intl.message(
-      'I\'ll keep improving!',
-      name: 'rate3Star',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Your recognition means a lot!`
-  String get rate4Star {
-    return Intl.message(
-      'Your recognition means a lot!',
-      name: 'rate4Star',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Thank you so much~~`
-  String get rate5Star {
-    return Intl.message(
-      'Thank you so much~~',
-      name: 'rate5Star',
       desc: '',
       args: [],
     );
@@ -6867,6 +6807,156 @@ class S {
       name: 'licenseDetail',
       desc: '',
       args: [license],
+    );
+  }
+
+  /// `Sidebar`
+  String get sideBarSettings {
+    return Intl.message(
+      'Sidebar',
+      name: 'sideBarSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Token Card Settings`
+  String get tokenCardSettings {
+    return Intl.message(
+      'Token Card Settings',
+      name: 'tokenCardSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Token Operation`
+  String get tokenOperationSettings {
+    return Intl.message(
+      'Token Operation',
+      name: 'tokenOperationSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Token Copy Operation`
+  String get tokenCopyOperationSettings {
+    return Intl.message(
+      'Token Copy Operation',
+      name: 'tokenCopyOperationSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Other`
+  String get otherOperationSettings {
+    return Intl.message(
+      'Other',
+      name: 'otherOperationSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Backup Password`
+  String get backupPasswordSettings {
+    return Intl.message(
+      'Backup Password',
+      name: 'backupPasswordSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Auto Backup`
+  String get autoBackupSettings {
+    return Intl.message(
+      'Auto Backup',
+      name: 'autoBackupSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Local Backup`
+  String get localBackupSettings {
+    return Intl.message(
+      'Local Backup',
+      name: 'localBackupSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cloud Backup`
+  String get cloudBackupSettings {
+    return Intl.message(
+      'Cloud Backup',
+      name: 'cloudBackupSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Database Encryption`
+  String get databaseEncryptionSettings {
+    return Intl.message(
+      'Database Encryption',
+      name: 'databaseEncryptionSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gesture Lock`
+  String get gestureLockSettings {
+    return Intl.message(
+      'Gesture Lock',
+      name: 'gestureLockSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Auto Lock`
+  String get autoLockSettings {
+    return Intl.message(
+      'Auto Lock',
+      name: 'autoLockSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Project Repository`
+  String get projectRepoAbout {
+    return Intl.message(
+      'Project Repository',
+      name: 'projectRepoAbout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `App`
+  String get appAbout {
+    return Intl.message(
+      'App',
+      name: 'appAbout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact`
+  String get contactAbout {
+    return Intl.message(
+      'Contact',
+      name: 'contactAbout',
+      desc: '',
+      args: [],
     );
   }
 }

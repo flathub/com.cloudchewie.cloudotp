@@ -88,8 +88,8 @@ modules:
       - pubspec-sources.json
       - type: git
         url: https://github.com/Robert-Stackflow/CloudOTP.git
-        tag: V3.0.0
-        commit: a5f4f47085d822e837cbf4841ff7fde85fdd84b2
+        tag: V3.1.1
+        commit: 0ba5bd6e7c5a98983cd2723668df909623f86a07
       - type: file
         path: com.cloudchewie.cloudotp.metainfo.xml
       - type: dir

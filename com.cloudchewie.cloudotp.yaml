@@ -65,7 +65,6 @@ modules:
   - name: cloudotp
     buildsystem: simple
     build-options:
-      cxxflags: -Wno-error=deprecated-declarations
       arch:
         x86_64:
           env:
@@ -79,6 +78,7 @@ modules:
         PUB_CACHE: /run/build/cloudotp/.pub-cache
     build-commands:
       - setup-flutter.sh -C .
+      - ./gen-l10n.sh
       - flutter build linux --release
       - cp -r ${BUNDLE_PATH}/* ${FLATPAK_DEST}/bin
       - install -Dm644 com.cloudchewie.cloudotp.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
@@ -92,11 +92,11 @@ modules:
         commit: 0ba5bd6e7c5a98983cd2723668df909623f86a07
       - type: file
         path: com.cloudchewie.cloudotp.metainfo.xml
-      - type: dir
-        path: intl/cloudotp/generated
-        dest: lib/generated
-      - type: dir
-        path: intl/chewie/generated
-        dest: third-party/chewie/lib/src/generated
+      - type: script
+        dest-filename: gen-l10n.sh
+        commands:
+          - flutter gen-l10n
+          - cd third-party/chewie
+          - flutter gen-l10n
     modules:
       - flutter-sdk-3.27.4.json

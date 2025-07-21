@@ -53,8 +53,10 @@ modules:
     config-opts:
       - --with-tempstore=yes
       - --disable-tcl
+    post-install:
+      - ln -sv libsqlite3.so ${FLATPAK_DEST}/lib/libsqlcipher.so
     cleanup:
-      - /bin/sqlcipher
+      - /bin/sqlite3
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git
@@ -67,7 +69,6 @@ modules:
   - name: cloudotp
     buildsystem: simple
     build-options:
-      cxxflags: -Wno-error=deprecated-declarations
       build-args:
         - --share=network
       arch:
@@ -82,6 +83,7 @@ modules:
       env:
         PUB_CACHE: /run/build/cloudotp/.pub-cache
     build-commands:
+      - ./gen-l10n.sh
       - flutter build linux --release
       - cp -r ${BUNDLE_PATH}/* ${FLATPAK_DEST}/bin
       - install -Dm644 com.cloudchewie.cloudotp.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
@@ -90,16 +92,16 @@ modules:
     sources:
       - type: git
         url: https://github.com/Robert-Stackflow/CloudOTP.git
-        tag: V3.0.0
-        commit: a5f4f47085d822e837cbf4841ff7fde85fdd84b2
+        tag: V3.1.2
+        commit: c3aa6a2af43d06529e0cdef5e7055c4bebcaa518
       - type: file
         path: com.cloudchewie.cloudotp.metainfo.xml
-      - type: dir
-        path: intl/cloudotp/generated
-        dest: lib/generated
-      - type: dir
-        path: intl/chewie/generated
-        dest: third-party/chewie/lib/src/generated
+      - type: script
+        dest-filename: gen-l10n.sh
+        commands:
+          - flutter gen-l10n
+          - cd third-party/chewie
+          - flutter gen-l10n
       - type: git
         url: https://github.com/flutter/flutter.git
         tag: 3.27.4

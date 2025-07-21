@@ -52,8 +52,10 @@ modules:
     config-opts:
       - --with-tempstore=yes
       - --disable-tcl
+    post-install:
+      - ln -sv libsqlite3.so ${FLATPAK_DEST}/lib/libsqlcipher.so
     cleanup:
-      - /bin/sqlcipher
+      - /bin/sqlite3
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git

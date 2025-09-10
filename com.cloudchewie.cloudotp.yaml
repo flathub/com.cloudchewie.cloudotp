@@ -2,10 +2,10 @@
 # Visit the flatpak-flutter project at https://github.com/TheAppgineer/flatpak-flutter
 app-id: com.cloudchewie.cloudotp
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.llvm19
+  - org.freedesktop.Sdk.Extension.llvm20
 command: CloudOTP
 finish-args:
   - --share=ipc
@@ -67,6 +67,7 @@ modules:
   - name: cloudotp
     buildsystem: simple
     build-options:
+      cxxflags: -Wno-error=deprecated-literal-operator
       arch:
         x86_64:
           env:

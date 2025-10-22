@@ -79,7 +79,8 @@ modules:
         PUB_CACHE: /run/build/cloudotp/.pub-cache
     build-commands:
       - setup-flutter.sh -C .
-      - ./gen-l10n.sh
+      - flutter gen-l10n
+      - cd third-party/chewie && flutter gen-l10n
       - flutter build linux --release
       - cp -r ${BUNDLE_PATH}/* ${FLATPAK_DEST}/bin
       - install -Dm644 com.cloudchewie.cloudotp.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
@@ -93,11 +94,5 @@ modules:
         commit: c3aa6a2af43d06529e0cdef5e7055c4bebcaa518
       - type: file
         path: com.cloudchewie.cloudotp.metainfo.xml
-      - type: script
-        dest-filename: gen-l10n.sh
-        commands:
-          - flutter gen-l10n
-          - cd third-party/chewie
-          - flutter gen-l10n
     modules:
       - flutter-sdk-3.27.4.json

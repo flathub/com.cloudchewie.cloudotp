@@ -1,0 +1,98 @@
+name: Update CloudOTP
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_version:
+        description: "CloudOTP version to update to (leave empty for latest)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout flatpak-flutter
+        uses: actions/checkout@v4
+        with:
+          repository: TheAppgineer/flatpak-flutter
+          path: flatpak-flutter
+
+      - name: Checkout com.cloudchewie.cloudotp
+        uses: actions/checkout@v4
+        with:
+          path: flatpak-flutter/com.cloudchewie.cloudotp
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          sudo add-apt-repository -y ppa:flatpak/stable
+          sudo apt-get update -q
+          sudo apt-get install -y flatpak flatpak-builder ca-certificates software-properties-common
+          flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+          flatpak install flathub org.flathub.flatpak-external-data-checker org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.freedesktop.Sdk.Extension.llvm20//25.08 -y
+          pip install packaging pyyaml toml
+
+      - name: Fetch CloudOTP version
+        id: version
+        run: |
+          if [ -n "${{ github.event.inputs.target_version }}" ]; then
+            CloudOTP_VERSION="${{ github.event.inputs.target_version }}"
+          else
+            CloudOTP_VERSION=$(git ls-remote --tags https://github.com/Robert-Stackflow/CloudOTP | grep -E "refs/tags/V[0-9.]+$" | tail -1 | sed 's|.*refs/tags/||')
+          fi
+          echo "Version: $CloudOTP_VERSION"
+          echo "version=$CloudOTP_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Clone CloudOTP repository
+        working-directory: flatpak-flutter/com.cloudchewie.cloudotp
+        run: git clone https://github.com/Robert-Stackflow/CloudOTP -b ${{ steps.version.outputs.version }}
+
+      - name: Update submodules
+        working-directory: flatpak-flutter/com.cloudchewie.cloudotp
+        run: git submodule update --remote
+
+      - name: Update flatpak manifest
+        working-directory: flatpak-flutter/com.cloudchewie.cloudotp
+        run: |
+          flatpak run org.flathub.flatpak-external-data-checker flatpak-flutter.yaml --edit
+          flatpak run org.flathub.flatpak-external-data-checker com.cloudchewie.cloudotp.yaml --edit
+
+      - name: Regenerate pub source
+        working-directory: flatpak-flutter/com.cloudchewie.cloudotp
+        run: python3 ../flatpak-flutter.py flatpak-flutter.yaml
+
+      - name: Configure Git
+        working-directory: flatpak-flutter/com.cloudchewie.cloudotp
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: flatpak-flutter/com.cloudchewie.cloudotp
+          commit-message: "Update CloudOTP to ${{ steps.version.outputs.version }}"
+          title: "Update CloudOTP to ${{ steps.version.outputs.version }}"
+          body: |
+            This PR updates CloudOTP to version ${{ steps.version.outputs.version }}.
+
+            Changes:
+            - Updated to CloudOTP ${{ steps.version.outputs.version }}
+            - Updated submodules
+            - Regenerated pub source
+
+            🤖 This PR was created automatically by GitHub Actions.
+          branch: update-cloudotp-${{ steps.version.outputs.version }}
+          delete-branch: true

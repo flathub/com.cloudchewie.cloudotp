@@ -54,10 +54,6 @@ jobs:
           echo "Version: $CloudOTP_VERSION"
           echo "version=$CloudOTP_VERSION" >> $GITHUB_OUTPUT
 
-      - name: Clone CloudOTP repository
-        working-directory: flatpak-flutter/com.cloudchewie.cloudotp
-        run: git clone https://github.com/Robert-Stackflow/CloudOTP -b ${{ steps.version.outputs.version }}
-
       - name: Update submodules
         working-directory: flatpak-flutter/com.cloudchewie.cloudotp
         run: git submodule update --remote

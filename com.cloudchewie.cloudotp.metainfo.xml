@@ -58,4 +58,9 @@
   </releases>
   <content_rating type="oars-1.1"/>
   <update_contact>i@pugai.life</update_contact>
+  <keywords>
+    <keyword>totp authenticator</keyword>
+    <keyword>cloud backup</keyword>
+    <keyword>two-factor authentication</keyword>
+  </keywords>
 </component>

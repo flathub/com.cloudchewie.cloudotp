@@ -26,7 +26,6 @@ cleanup:
   - /share/gtk-doc
   - /var/lib
 modules:
-  - shared-modules/libsecret/libsecret.json
   - shared-modules/libayatana-appindicator/libayatana-appindicator-gtk3.json
   - name: keybinder3
     buildsystem: autotools

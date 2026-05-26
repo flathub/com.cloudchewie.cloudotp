@@ -89,7 +89,10 @@ modules:
         url: https://github.com/Robert-Stackflow/CloudOTP.git
         tag: V4.0.0
         commit: fa963c16f826a4c80fd098c55f58fc13fa36d0ee
-        is-main-source: true
+        x-checker-data:
+          type: git
+          tag-pattern: ^V([\d.]+)$
+          is-main-source: true
       - type: file
         path: com.cloudchewie.cloudotp.metainfo.xml
       - generated/sources/pubspec.json

@@ -70,28 +70,6 @@ jobs:
           python3 ../flatpak-flutter.py flatpak-flutter.yaml
           rm -r build/
 
-      # TODO:
-      # - name: Update metainfo.xml release info
-      #   working-directory: flatpak-flutter/com.cloudchewie.cloudotp
-      #   run: |
-      #     RELEASE_VERSION="${{ steps.version.outputs.version }}"
-      #     RELEASE_VERSION="${RELEASE_VERSION#V}"
-      #     RELEASE_DATE="$(date +%Y-%m-%d)"
-      #     METAINFO="com.cloudchewie.cloudotp.metainfo.xml"
-
-      #     if xmlstarlet sel -t -v "/component/releases/release[@version=\"$RELEASE_VERSION\"]" "$METAINFO" | grep -q .; then
-      #       echo "Release $RELEASE_VERSION already exists in metainfo.xml, skipping."
-      #     else
-      #       xmlstarlet ed -L -s "/component/releases" -t elem -n releaseTMP -v "" \
-      #         -i //releaseTMP -t attr -n version -v "$RELEASE_VERSION" \
-      #         -i //releaseTMP -t attr -n date -v "$RELEASE_DATE" \
-      #         -s //releaseTMP -t elem -n description -v "" \
-      #         -r //releaseTMP -v release \
-      #         "$METAINFO"
-      #       xmlstarlet ed -P -L -m "/component/releases/release[last()]" "/component/releases[1]" "$METAINFO"
-      #       echo "Inserted release $RELEASE_VERSION to metainfo.xml."
-      #     fi
-
       - name: Configure Git
         working-directory: flatpak-flutter/com.cloudchewie.cloudotp
         run: |

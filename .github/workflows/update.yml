@@ -38,7 +38,7 @@ jobs:
         run: |
           sudo add-apt-repository -y ppa:flatpak/stable
           sudo apt-get update -q
-          sudo apt-get install -y flatpak flatpak-builder ca-certificates software-properties-common
+          sudo apt-get install -y flatpak flatpak-builder ca-certificates software-properties-common xmlstarlet
           flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
           flatpak install flathub org.flathub.flatpak-external-data-checker org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.freedesktop.Sdk.Extension.llvm20//25.08 -y
           pip install packaging pyyaml tomlkit
@@ -58,7 +58,7 @@ jobs:
         working-directory: flatpak-flutter/com.cloudchewie.cloudotp
         run: git submodule update --remote
 
-      - name: Update flatpak manifest and metainfo
+      - name: Update flatpak manifest
         working-directory: flatpak-flutter/com.cloudchewie.cloudotp
         run: |
           flatpak run org.flathub.flatpak-external-data-checker flatpak-flutter.yaml --edit
@@ -69,6 +69,30 @@ jobs:
         run: |
           python3 ../flatpak-flutter.py flatpak-flutter.yaml
           rm -r build/
+
+      - name: Update metainfo.xml release info
+        working-directory: flatpak-flutter/com.cloudchewie.cloudotp
+        run: |
+          RELEASE_VERSION="${{ steps.version.outputs.version }}"
+          RELEASE_DATE="$(date +%Y-%m-%d)"
+          METAINFO="com.cloudchewie.cloudotp.metainfo.xml"
+          if xmlstarlet sel -t -v "/component/releases/release[@version=\"$RELEASE_VERSION\"]" "$METAINFO" | grep -q .; then
+            echo "Release $RELEASE_VERSION already exists, skipping insert."
+          else
+            TMPFILE="$(mktemp)"
+            xmlstarlet ed -P -L -s "/component/releases" -t elem -n "NEWRELEASE" -v "" "$METAINFO"
+            xmlstarlet ed -P -L \
+              -i "/component/releases/NEWRELEASE" -t attr -n version -v "$RELEASE_VERSION" \
+              -i "/component/releases/NEWRELEASE" -t attr -n date -v "$RELEASE_DATE" \
+              "$METAINFO"
+            xmlstarlet ed -P -L \
+              --subnode "/component/releases/NEWRELEASE" --type elem -n description -v "" \
+              "$METAINFO"
+            # 移动NEWRELEASE为第一个节点
+            xmlstarlet ed -P -L -m "/component/releases/NEWRELEASE" "/component/releases/release[1]" "$METAINFO"
+            # 删除最后的NEWRELEASE(复制后原地残留)
+            xmlstarlet ed -P -L -d "/component/releases/NEWRELEASE" "$METAINFO"
+          fi
 
       - name: Configure Git
         working-directory: flatpak-flutter/com.cloudchewie.cloudotp

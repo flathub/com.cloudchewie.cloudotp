@@ -50,11 +50,14 @@
   </screenshots>
   <releases>
     <release version="3.1.2" date="2025-07-19">
-      <description></description>
-    </release>
+      <description/>
+    <release version="V4.0.0" date="2026-05-26">
+      <description/>
+    </release></release>
     <release version="2.4.6" date="2024-10-11">
-      <description></description>
+      <description/>
     </release>
+    
   </releases>
   <content_rating type="oars-1.1"/>
   <update_contact>i@pugai.life</update_contact>

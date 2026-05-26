@@ -41,7 +41,7 @@ jobs:
           sudo apt-get install -y flatpak flatpak-builder ca-certificates software-properties-common
           flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
           flatpak install flathub org.flathub.flatpak-external-data-checker org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.freedesktop.Sdk.Extension.llvm20//25.08 -y
-          pip install packaging pyyaml toml
+          pip install packaging pyyaml tomlkit
 
       - name: Fetch CloudOTP version
         id: version
@@ -58,15 +58,17 @@ jobs:
         working-directory: flatpak-flutter/com.cloudchewie.cloudotp
         run: git submodule update --remote
 
-      - name: Update flatpak manifest
+      - name: Update flatpak manifest and metainfo
         working-directory: flatpak-flutter/com.cloudchewie.cloudotp
         run: |
           flatpak run org.flathub.flatpak-external-data-checker flatpak-flutter.yaml --edit
-          flatpak run org.flathub.flatpak-external-data-checker com.cloudchewie.cloudotp.yaml --edit
+          rm -r generated/
 
       - name: Regenerate pub source
         working-directory: flatpak-flutter/com.cloudchewie.cloudotp
-        run: python3 ../flatpak-flutter.py flatpak-flutter.yaml
+        run: |
+          python3 ../flatpak-flutter.py flatpak-flutter.yaml
+          rm -r build/
 
       - name: Configure Git
         working-directory: flatpak-flutter/com.cloudchewie.cloudotp

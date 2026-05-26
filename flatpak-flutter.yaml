@@ -3,7 +3,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.llvm20
+  - org.freedesktop.Sdk.Extension.llvm22
 command: CloudOTP
 finish-args:
   - --share=ipc
@@ -57,8 +57,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git
-        tag: v4.12.0
-        commit: ab223bd801ec225d1497a077da08777d21d1266d
+        tag: v4.16.0
+        commit: e2a6040f2ae5cfff2b3e08eb3320007d93cdf3fc
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -66,7 +66,6 @@ modules:
   - name: cloudotp
     buildsystem: simple
     build-options:
-      cxxflags: -Wno-error=deprecated-literal-operator
       build-args:
         - --share=network
       arch:
@@ -76,8 +75,8 @@ modules:
         aarch64:
           env:
             BUNDLE_PATH: build/linux/arm64/release/bundle
-      append-path: /usr/lib/sdk/llvm20/bin:/run/build/cloudotp/flutter/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm20/lib
+      append-path: /usr/lib/sdk/llvm22/bin:/run/build/cloudotp/flutter/bin
+      prepend-ld-library-path: /usr/lib/sdk/llvm22/lib
       env:
         PUB_CACHE: /run/build/cloudotp/.pub-cache
     build-commands:
@@ -91,12 +90,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/Robert-Stackflow/CloudOTP.git
-        tag: V3.1.2
-        commit: c3aa6a2af43d06529e0cdef5e7055c4bebcaa518
+        tag: V4.0.0
+        commit: fa963c16f826a4c80fd098c55f58fc13fa36d0ee
+        is-main-source: true
       - type: file
         path: com.cloudchewie.cloudotp.metainfo.xml
       - type: git
         url: https://github.com/flutter/flutter.git
-        tag: 3.27.4
-        commit: d8a9f9a52e5af486f80d932e838ee93861ffd863
+        tag: 3.41.9
+        commit: 00b0c91f06209d9e4a41f71b7a512d6eb3b9c694
         dest: flutter

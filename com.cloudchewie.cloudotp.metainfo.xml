@@ -40,12 +40,12 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <caption>Home</caption>
-      <image type="source">https://apps.cloudchewie.com/assets/desktop_1.Bzxetk0a.png</image>
+      <caption>Light</caption>
+      <image type="source">https://otp.cloudchewie.com/demo.png</image>
     </screenshot>
     <screenshot type="default">
-      <caption>Edit</caption>
-      <image type="source">https://apps.cloudchewie.com/assets/desktop_2.CAdcFEB3.png</image>
+      <caption>Dark</caption>
+      <image type="source">https://otp.cloudchewie.com/demo-dark.png</image>
     </screenshot>
   </screenshots>
   <releases>
